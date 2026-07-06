@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | #One Software Solutions</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Repeating base styles for the self-contained page as requested by architecture constraints -->
+    
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="#One Software Solutions Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" style="color: var(--secondary);">About</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header reveal">
+            <div class="container">
+                <h1>Our future</h1>
+                <p>We are a collective of engineers, designers, and architects dedicated to pushing the boundaries of what is technically possible on the web.</p>
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="container story-grid">
+                <div class="reveal">
+                    <h2>The Genesis of #One</h2>
+                    <p>Founded by veteran software engineers, #One Software Solutions was born out of frustration with bloated, slow, and uninspired enterprise software.</p>
+                    <p>We believe that B2B software and complex architectures shouldn't require compromising on user experience. Our philosophy is simple: write clean code, design minimalist interfaces, and engineer for scale from day one.</p>
+                </div>
+                <div class="story-image reveal" style="transition-delay: 200ms;"></div>
+            </div>
+        </section>
+
+        <section class="section-padding" style="background: rgba(0,0,0,0.03);">
+            <div class="container">
+                <div class="text-center reveal">
+                    <h2>Core Principles</h2>
+                </div>
+                <div class="mv-grid">
+                    <div class="mv-card reveal">
+                        <h3>Mission</h3>
+                        <p>To architect robust, scalable, and beautiful software solutions that empower modern enterprises to operate efficiently and elegantly.</p>
+                    </div>
+                    <div class="mv-card reveal" style="transition-delay: 100ms;">
+                        <h3>Vision</h3>
+                        <p>To become the global standard for engineering excellence, bridging the gap between heavy enterprise requirements and consumer-grade design.</p>
+                    </div>
+                    <div class="mv-card reveal" style="transition-delay: 200ms;">
+                        <h3>Values</h3>
+                        <p>Code quality over speed. Minimalism over clutter. Performance as a feature. Absolute transparency with our partners.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="container">
+                <div class="text-center reveal">
+                    <h2>Our Journey</h2>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item reveal">
+                        <div class="timeline-content">
+                            <span class="year">2026</span>
+                            <h3>The Beginning</h3>
+                            <p>start in 2025/26</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-content">
+                            <span class="year">20##</span>
+                            <h3>Cloud & AI Expansion</h3>
+                            <p>next plan</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-content">
+                            <span class="year">20##</span>
+                            <h3>Global Reach</h3>
+                            <p>next plan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="border-top: 1px solid var(--border-color); padding: 40px 0; text-align: center; color: var(--text-muted);">
+        <p>&copy; 2026 #One Software Solutions. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Scroll Reveal Logic
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+  
+</body>
+</html>
